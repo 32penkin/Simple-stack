@@ -33,11 +33,11 @@ class Stack {
   }
 
   getSize() {
-
+    return this.size;
   }
 
   getTop() {
-
+    return this.top;
   }
 
 }

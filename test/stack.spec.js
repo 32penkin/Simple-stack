@@ -72,14 +72,14 @@ describe('Stack', () => {
     st.append('node3');
 
     it('assigns 3 to this.size', () => {
-      expect(st.size).to.equal(3);
+      expect(st.getSize()).to.equal(3);
     });
 
     it('assigns 0 to this.size', () => {
       st.pop();
       st.pop();
       st.pop();
-      expect(st.size).to.equal(0);
+      expect(st.getSize()).to.equal(0);
     });
   });
 
