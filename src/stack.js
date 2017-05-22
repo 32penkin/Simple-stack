@@ -7,7 +7,16 @@ class Stack {
   }
 
   append(data) {
+    const node = new Node(data);
 
+    if(this.size == 0) {
+      this.top = node;
+      this.size++;
+    } else {
+      node.prev = this.top;
+      this.top = node;
+      this.size++;
+    }
   }
 
   pop() {
