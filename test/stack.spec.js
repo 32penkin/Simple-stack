@@ -32,25 +32,33 @@ describe('Stack', () => {
 
   describe('#pop', () => {
     const st = new Stack();
+    const st2 = new Stack();
 
     st.append('node1');
     st.append('node2');
     st.append('node3');
 
-    it('assigns 2 to this.size', () => {
+    it('assigns 2 to this.size and check top', () => {
       st.pop();
       expect(st.size).to.equal(2);
-    });
-
-    it('assigns node2 to this.top', () => {
-      st.pop();
       expect(st.top.data).to.equal('node2');
     });
 
-    it('assigns node3 to this.top', () => {
+    it('instanceof', () => {
+      expect(st.pop()).to.be.an.instanceof(Node);
+    });
+
+    it('assigns fully popped stack', () => {
       st.pop();
       st.pop();
       st.pop();
+      st.pop();
+      expect(st.size).to.equal(0);
+      expect(st.top).to.equal(null);
+    });
+
+    it('check an empty stack', () => {
+      st2.pop();
       expect(st.size).to.equal(0);
       expect(st.top).to.equal(null);
     });

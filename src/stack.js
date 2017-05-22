@@ -20,10 +20,23 @@ class Stack {
   }
 
   pop() {
+    let temp = this.top;
 
+    if(this.size == 0) {
+      return null;
+    } else {
+      temp = this.top;
+      this.top = this.top.prev;
+      this.size--;
+      return temp;
+    }
   }
 
   getSize() {
+
+  }
+
+  getTop() {
 
   }
 
