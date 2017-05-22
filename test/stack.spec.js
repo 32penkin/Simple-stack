@@ -28,6 +28,31 @@ describe('Stack', () => {
     it('assigns node3 to this.top', () => {
       expect(st.top.data).to.equal('node3');
     });
+  });
 
+  describe('#pop', () => {
+    const st = new Stack();
+
+    st.append('node1');
+    st.append('node2');
+    st.append('node3');
+
+    it('assigns 2 to this.size', () => {
+      st.pop();
+      expect(st.size).to.equal(2);
+    });
+
+    it('assigns node2 to this.top', () => {
+      st.pop();
+      expect(st.top.data).to.equal('node2');
+    });
+
+    it('assigns node3 to this.top', () => {
+      st.pop();
+      st.pop();
+      st.pop();
+      expect(st.size).to.equal(0);
+      expect(st.top).to.equal(null);
+    });
   });
 });
