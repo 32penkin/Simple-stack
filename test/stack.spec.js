@@ -21,7 +21,7 @@ describe('Stack', () => {
     st.append('node2');
     st.append('node3');
 
-    it('assigns 0 to this.size', () => {
+    it('assigns 3 to this.size', () => {
       expect(st.size).to.equal(3);
     });
 
